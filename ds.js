@@ -51,7 +51,54 @@
 // console.log(check(arr,avg));
 
 
-var str = "vishnu"
-var news = str.split("")
-news = new Map()
-console.log(news);
+// var str = "vishnu"
+// var news = str.split("")
+// news = new Map()
+// console.log(news);
+
+
+
+// var nums = [4,7,4,5];
+// var target = 9;
+
+//  function Twosum(nums,target){
+  
+
+//     for( var i=0; i< nums.length; i++){
+        
+//         for( var j=1; j< nums.length; j++ ){
+            
+//             if(nums[i]+nums[j] === target){
+//                 return ([i,j])
+//             }
+//         }
+//     }
+
+// }
+
+
+
+// console.log(Twosum(nums,target));
+
+
+
+
+
+var nums = [4,7,4,5];
+var target = 9;
+
+ function Twosum(nums,target){
+  
+    let tar = target;
+    let value = 0;
+    for(var i=0; i< nums.length; i++){
+        value = target-nums[i];
+        var arr = arr.push(value)
+    }
+    
+
+}
+
+
+
+console.log(Twosum(nums,target));
