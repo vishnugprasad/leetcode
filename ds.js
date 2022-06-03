@@ -39,7 +39,8 @@
 //     var obj = {};
 //     var elem = [];
 //     for(i=0; i<len-1; i++){
-//         if(obj[(2*target - item[i])]){
+//         if(obj[(target - item[i])]){
+    
 //             elem.push([item[i],obj[(2*target - item[i])]])
 //         }
 //         obj[ item[i]] = item[i]

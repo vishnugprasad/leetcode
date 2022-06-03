@@ -172,7 +172,38 @@
 // merge(intervals)
 
 
-let error = 3;
+// let error = 3;
 
-console.log("something went wrong", error);
-console.log("something went wrong "+ error);
+// console.log("something went wrong", error);
+// console.log("something went wrong "+ error);
+
+var nums = [2,3,11,7] 
+var target = 9
+
+
+var twoSum = function(nums, target) {
+    var map = {};
+    
+    for(var i = 0; i <nums.length; i++) {
+        
+        var value = nums[i];
+        var complementpair = target - value;
+                console.log(map[complementpair]);
+
+        if(map[complementpair] !== undefined) {
+            console.log(map[complementpair]);
+
+            return [map[complementpair],i];
+            
+        }
+        else {
+            map[value] = i;
+        }
+    }
+    
+};
+
+
+
+console.log(twoSum(nums,target));
+
