@@ -177,71 +177,104 @@
 // console.log("something went wrong", error);
 // console.log("something went wrong "+ error);
 
-var nums = [2,3,11,7] 
-var target = 9
+// var nums = [2,3,11,7] 
+// var target = 9
 
 
-var twoSum = function(nums, target) {
-    var map = {};
+// var twoSum = function(nums, target) {
+//     var map = {};
     
-    for(var i = 0; i <nums.length; i++) {
+//     for(var i = 0; i <nums.length; i++) {
         
-        var value = nums[i];
-        var complementpair = target - value;
-                console.log(map[complementpair]);
+//         var value = nums[i];
+//         var complementpair = target - value;
+//                 console.log(map[complementpair]);
 
-        if(map[complementpair] !== undefined) {
-            console.log(map[complementpair]);
+//         if(map[complementpair] !== undefined) {
+//             console.log(map[complementpair]);
 
-            return [map[complementpair],i];
+//             return [map[complementpair],i];
             
-        }
-        else {
-            map[value] = i;
-        }
-    }
+//         }
+//         else {
+//             map[value] = i;
+//         }
+//     }
     
-};
+// };
 
 
 
-console.log(twoSum(nums,target));
+// console.log(twoSum(nums,target));
 
 
 
-var subsetsWithDup = function(nums) {
-    var res = [];
-    nums.sort((a, b) => a - b);
-    helper(nums, 0, res, []);
-    return res;
-  };
+// var subsetsWithDup = function(nums) {
+//     var res = [];
+//     nums.sort((a, b) => a - b);
+//     helper(nums, 0, res, []);
+//     return res;
+//   };
   
-  var helper = function (nums, start, res, now) {
-    res.push(Array.from(now));
+//   var helper = function (nums, start, res, now) {
+//     res.push(Array.from(now));
   
-    for (var i = start; i < nums.length; i++) {
-      if (i === start || nums[i] !== nums[i - 1]) {
-        now.push(nums[i]);
-        helper(nums, i + 1, res, now);
-        now.pop();
-      }
-    }
-  };
+//     for (var i = start; i < nums.length; i++) {
+//       if (i === start || nums[i] !== nums[i - 1]) {
+//         now.push(nums[i]);
+//         helper(nums, i + 1, res, now);
+//         now.pop();
+//       }
+//     }
+//   };
 
 
 
 
 
-  var numTrees = function(n) {
-    let dp = new Array(n+1).fill(0);
-    dp[0] = 1;
-    dp[1] = 1;
+//   var numTrees = function(n) {
+//     let dp = new Array(n+1).fill(0);
+//     dp[0] = 1;
+//     dp[1] = 1;
 
-    for (let i = 2; i <= n; i++) {
-        for (let j = 0; j < i; j++) {
+//     for (let i = 2; i <= n; i++) {
+//         for (let j = 0; j < i; j++) {
            
-            dp[i] += dp[j] * dp[i-j-1];
-        }
+//             dp[i] += dp[j] * dp[i-j-1];
+//         }
+//     }
+//     return dp[n];
+// }
+
+
+
+// Longest substring without repeating
+
+
+var s = "ab0c0ed";
+
+
+// var lengthOfSubs = function(s){
+//   for( let begin =0; begin<s.length; begin++){
+//     for(let end = begin; end<s.length; end++){
+//       var substr = s.substring(begin,end+1)
+//       console.log(substr);
+//     }
+//   }
+// }
+
+// lengthOfSubs(s)
+
+
+var s  = "abc0de0"
+
+var subStrn = function(s){
+  for(let begin = 0; begin < s.length; begin++){
+    for(let end = begin; end < s.length; end++){
+      const str = s.substring(begin, end+1)
+      console.log(str);
     }
-    return dp[n];
+  }
 }
+
+subStrn(s)
